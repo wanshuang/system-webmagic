@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  #数据源和jpa配置
+  datasource:
+    #数据库相关的配置url  -SSL连接设置为false
+    url: jdbc:mysql://192.168.40.10:3306/ytpay?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    #配置用户名
+    username: ytpay
+    #配置密码
+    password: ytpay
