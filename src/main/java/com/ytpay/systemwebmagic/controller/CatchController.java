@@ -2,6 +2,7 @@ package com.ytpay.systemwebmagic.controller;
 
 import com.ytpay.systemwebmagic.processor.meituan.com.MeiShiDetailProcessor;
 import com.ytpay.systemwebmagic.processor.meituan.com.MeiShiProcessor;
+import com.ytpay.systemwebmagic.processor.meituan.com.MeiShiSearchProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +23,9 @@ public class CatchController {
     @Autowired
     MeiShiDetailProcessor meiShiDetailProcessor;
 
+    @Autowired
+    MeiShiSearchProcessor meiShiSearchProcessor;
+
     @RequestMapping(value = "/meituan/meishi", method = RequestMethod.GET)
     public String catchMeiShi(@RequestParam(value = "update", required = false) Boolean update) {
         meiShiProcessor.startCatch(update);
@@ -38,6 +42,12 @@ public class CatchController {
     @RequestMapping(value = "/meituan/meishi/detail", method = RequestMethod.GET)
     public String catchMeiShiDetailById(@RequestParam(value = "poiId") Integer poiId) {
         meiShiDetailProcessor.startCatchById(poiId);
+        return "success";
+    }
+
+    @RequestMapping(value = "/meituan/meishi/search", method = RequestMethod.GET)
+    public String catchMeiShiDetailById(@RequestParam(value = "search") String search) {
+        meiShiSearchProcessor.setSearch(search).doSearch();
         return "success";
     }
 }
