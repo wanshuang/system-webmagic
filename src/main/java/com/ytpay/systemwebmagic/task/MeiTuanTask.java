@@ -29,7 +29,7 @@ public class MeiTuanTask {
 
     int count = 1;
 
-    @Scheduled(cron = "* * * * * ?")
+//    @Scheduled(cron = "* * * * * ?")
     public void catchMeiTuan() {
         if (count % 3 == 1) {
             log.info("meiShiDetailProcessor start");

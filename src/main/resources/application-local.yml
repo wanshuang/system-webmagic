@@ -4,14 +4,15 @@ spring:
   #数据源和jpa配置
   datasource:
     #数据库相关的配置url  -SSL连接设置为false
-    url: jdbc:mysql://172.16.0.31:3306/ytpay?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://127.0.0.1:3306/test_db?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
     #配置用户名
-    username: root
+    username: test
     #配置密码
-    password: gozapdev
+    password: test
   jpa:
     hibernate:
       naming:
         #无修改命名)
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
     show-sql: true
