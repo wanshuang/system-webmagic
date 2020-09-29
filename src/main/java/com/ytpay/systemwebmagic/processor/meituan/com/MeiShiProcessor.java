@@ -137,7 +137,7 @@ public class MeiShiProcessor implements PageProcessor {
                 List<RestaurantVo> restaurantList = Lists.newArrayList();
 
                 //如果此页有数据
-                if (!poiList.isEmpty()) {
+                if (poiList != null && !poiList.isEmpty()) {
                     //解析
                     for (int index = 0; index < poiList.size(); index++) {
                         JSONObject poi = poiList.getJSONObject(index);
