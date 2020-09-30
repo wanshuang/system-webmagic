@@ -1,12 +1,11 @@
 package com.ytpay.systemwebmagic.service.wantiku.com;
 
-import com.ytpay.systemwebmagic.data.entity.SubjectParent;
-import com.ytpay.systemwebmagic.data.repository.SubjectParentRepository;
+import com.ytpay.systemwebmagic.data.entity.wantiku.com.SubjectParent;
+import com.ytpay.systemwebmagic.data.repository.wantiku.com.SubjectParentRepository;
 import com.ytpay.systemwebmagic.processor.wantiku.com.WTKSubjectProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
 import java.util.List;
 
 /**

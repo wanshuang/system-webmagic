@@ -1,4 +1,4 @@
-package com.ytpay.systemwebmagic.data.entity;
+package com.ytpay.systemwebmagic.data.entity.wantiku.com;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -10,10 +10,10 @@ import javax.persistence.*;
  * @date 2020/9/28
  */
 @Entity
-@Table(name = "t_wantiku_answer")
+@Table(name = "t_wantiku_question")
 @Accessors(chain = true)
 @Data
-public class Answer {
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

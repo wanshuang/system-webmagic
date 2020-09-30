@@ -1,8 +1,8 @@
 package com.ytpay.systemwebmagic.processor.meituan.com;
 
 import com.alibaba.fastjson.JSONObject;
-import com.ytpay.systemwebmagic.data.entity.MeiTuanRestaurant;
-import com.ytpay.systemwebmagic.data.repository.MeiTuanRestaurantRepository;
+import com.ytpay.systemwebmagic.data.entity.meituan.com.MeiTuanRestaurant;
+import com.ytpay.systemwebmagic.data.repository.meituan.com.MeiTuanRestaurantRepository;
 import com.ytpay.systemwebmagic.model.meituan.com.RestaurantDetailVo;
 import com.ytpay.systemwebmagic.pipeline.meituan.com.RestaurantDetailPipeline;
 import org.apache.commons.lang3.ObjectUtils;

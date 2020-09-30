@@ -1,7 +1,7 @@
 package com.ytpay.systemwebmagic.pipeline.meituan.com;
 
-import com.ytpay.systemwebmagic.data.entity.MeiTuanRestaurant;
-import com.ytpay.systemwebmagic.data.repository.MeiTuanRestaurantRepository;
+import com.ytpay.systemwebmagic.data.entity.meituan.com.MeiTuanRestaurant;
+import com.ytpay.systemwebmagic.data.repository.meituan.com.MeiTuanRestaurantRepository;
 import com.ytpay.systemwebmagic.model.meituan.com.RestaurantDetailVo;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;

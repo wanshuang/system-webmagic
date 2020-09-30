@@ -1,7 +1,7 @@
 package com.ytpay.systemwebmagic.pipeline.wantiku.com;
 
-import com.ytpay.systemwebmagic.data.entity.Subject;
-import com.ytpay.systemwebmagic.data.repository.SubjectRepository;
+import com.ytpay.systemwebmagic.data.entity.wantiku.com.Subject;
+import com.ytpay.systemwebmagic.data.repository.wantiku.com.SubjectRepository;
 import com.ytpay.systemwebmagic.model.wantiku.com.SubjectVo;
 import org.apache.commons.collections.CollectionUtils;
 import org.assertj.core.util.Lists;

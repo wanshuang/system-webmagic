@@ -1,8 +1,7 @@
-package com.ytpay.systemwebmagic.data.repository;
+package com.ytpay.systemwebmagic.data.repository.wantiku.com;
 
-import com.ytpay.systemwebmagic.data.entity.Answer;
-import com.ytpay.systemwebmagic.data.entity.Question;
-import com.ytpay.systemwebmagic.data.entity.Subject;
+import com.ytpay.systemwebmagic.data.entity.wantiku.com.Answer;
+import com.ytpay.systemwebmagic.data.entity.wantiku.com.Subject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

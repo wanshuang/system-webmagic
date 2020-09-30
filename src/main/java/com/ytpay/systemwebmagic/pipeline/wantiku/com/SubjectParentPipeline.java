@@ -1,10 +1,7 @@
 package com.ytpay.systemwebmagic.pipeline.wantiku.com;
 
-import com.ytpay.systemwebmagic.data.entity.MeiTuanRestaurant;
-import com.ytpay.systemwebmagic.data.entity.SubjectParent;
-import com.ytpay.systemwebmagic.data.repository.MeiTuanRestaurantRepository;
-import com.ytpay.systemwebmagic.data.repository.SubjectParentRepository;
-import com.ytpay.systemwebmagic.model.meituan.com.RestaurantVo;
+import com.ytpay.systemwebmagic.data.entity.wantiku.com.SubjectParent;
+import com.ytpay.systemwebmagic.data.repository.wantiku.com.SubjectParentRepository;
 import com.ytpay.systemwebmagic.model.wantiku.com.SubjectParentVo;
 import org.apache.commons.collections.CollectionUtils;
 import org.assertj.core.util.Lists;

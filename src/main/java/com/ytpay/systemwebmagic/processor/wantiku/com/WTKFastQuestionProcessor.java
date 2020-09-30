@@ -3,13 +3,9 @@ package com.ytpay.systemwebmagic.processor.wantiku.com;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
-import com.ytpay.systemwebmagic.data.entity.Subject;
-import com.ytpay.systemwebmagic.model.wantiku.com.QuestionStatisticVo;
+import com.ytpay.systemwebmagic.data.entity.wantiku.com.Subject;
 import com.ytpay.systemwebmagic.model.wantiku.com.QuestionVo;
-import com.ytpay.systemwebmagic.model.wantiku.com.QuestionsAnswerEntityVo;
-import com.ytpay.systemwebmagic.model.wantiku.com.SubjectVo;
 import com.ytpay.systemwebmagic.pipeline.wantiku.com.PagerQuestionPipeline;
-import com.ytpay.systemwebmagic.pipeline.wantiku.com.SubjectParentPipeline;
 import com.ytpay.systemwebmagic.pipeline.wantiku.com.SubjectPipeline;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,7 +78,7 @@ public class WTKFastQuestionProcessor implements PageProcessor {
                         QuestionVo questionVo = JSONObject.parseObject(questionEntity.toJSONString(), QuestionVo.class);
                         questionVos.add(questionVo);
                     }
-                    page.putField("QuestionList", questionVos);
+                    page.putField("questionList", questionVos);
                 }
             }
         }

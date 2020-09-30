@@ -1,4 +1,4 @@
-package com.ytpay.systemwebmagic.data.entity;
+package com.ytpay.systemwebmagic.data.entity.wantiku.com;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

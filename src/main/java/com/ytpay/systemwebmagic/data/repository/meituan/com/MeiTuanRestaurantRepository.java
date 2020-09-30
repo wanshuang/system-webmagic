@@ -1,6 +1,6 @@
-package com.ytpay.systemwebmagic.data.repository;
+package com.ytpay.systemwebmagic.data.repository.meituan.com;
 
-import com.ytpay.systemwebmagic.data.entity.MeiTuanRestaurant;
+import com.ytpay.systemwebmagic.data.entity.meituan.com.MeiTuanRestaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
