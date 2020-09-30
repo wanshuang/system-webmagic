@@ -38,8 +38,6 @@ public class WTKSubjectProcessor implements PageProcessor {
 
     private static Integer MSGCODE_SUCCESS = 1;
 
-    private static Integer USER_ID = 32449786;
-
     @Autowired
     private WTKSubjectProcessor wtkSubjectProcessor;
 
