@@ -1,6 +1,7 @@
 package com.ytpay.systemwebmagic.model.wantiku.com;
 
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -9,7 +10,12 @@ import java.util.List;
  * @date 2020/9/30
  */
 @Data
+@ToString
 public class QuestionVo {
+
+    Integer subjectId;
+
+    Integer subjectParentId;
 
     Integer realQuestionId;
 
@@ -35,9 +41,8 @@ public class QuestionVo {
 
     String realPaperName;
 
-    String formatConntent;
+    String formatContent;
 
     QuestionsAnswerEntityVo questionsAnswerEntity;
-
 
 }

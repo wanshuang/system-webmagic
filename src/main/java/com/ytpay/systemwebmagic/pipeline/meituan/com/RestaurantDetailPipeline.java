@@ -32,6 +32,7 @@ public class RestaurantDetailPipeline implements Pipeline {
             meiTuanRestaurant.setOpenTime(vo.getOpenTime());
             meiTuanRestaurant.setUpdateTime(System.currentTimeMillis());
             meiTuanRestaurantRepository.save(meiTuanRestaurant);
+            System.out.println(meiTuanRestaurant);
         }
     }
 }

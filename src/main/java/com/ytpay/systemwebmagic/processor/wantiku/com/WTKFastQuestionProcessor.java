@@ -6,7 +6,6 @@ import com.google.common.collect.Lists;
 import com.ytpay.systemwebmagic.data.entity.wantiku.com.Subject;
 import com.ytpay.systemwebmagic.model.wantiku.com.QuestionVo;
 import com.ytpay.systemwebmagic.pipeline.wantiku.com.PagerQuestionPipeline;
-import com.ytpay.systemwebmagic.pipeline.wantiku.com.SubjectPipeline;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -50,7 +49,7 @@ public class WTKFastQuestionProcessor implements PageProcessor {
     private WTKFastQuestionProcessor wtkSubjectProcessor;
 
     @Autowired
-    private SubjectPipeline subjectPipeline;
+    private PagerQuestionPipeline pagerQuestionPipeline;
 
     private static Site site;
 
@@ -61,6 +60,10 @@ public class WTKFastQuestionProcessor implements PageProcessor {
         String rawText = page.getRawText();
         if (StringUtils.isNotBlank(rawText)) {
             JSONObject responseObj = JSONObject.parseObject(rawText);
+            if (responseObj.get("ErrorCode") != null &&
+                    MSGCODE_SUCCESS != responseObj.getInteger("ErrorCode")) {
+                return;
+            }
             System.out.println(responseObj.toJSONString());
             //paper信息
             JSONObject fastIntelligentPaperResult = responseObj.getJSONObject("FastIntelligentPaperResult");
@@ -76,7 +79,10 @@ public class WTKFastQuestionProcessor implements PageProcessor {
                         //题信息
                         JSONObject questionEntity = questionList.getJSONObject(questionIndex);
                         QuestionVo questionVo = JSONObject.parseObject(questionEntity.toJSONString(), QuestionVo.class);
+                        questionVo.setSubjectId(subject.getSubjectId());
+                        questionVo.setSubjectParentId(subject.getSubjectParentId());
                         questionVos.add(questionVo);
+                        System.out.println("questionVo:" + questionVo);
                     }
                     page.putField("questionList", questionVos);
                 }
@@ -91,18 +97,19 @@ public class WTKFastQuestionProcessor implements PageProcessor {
 
     public void startCatch(Subject subject) {
         Integer userId = RANDOM_USER_ID.nextInt(USER_ID);
-        String domain = URL_HTTPS + "/" + subject.getSubjectId() + "/" + userId + "/" + URL_TOKEN;
+        String domain = URL_HTTPS + "/" + subject.getSubjectId() + "/" + userId + "/GetFast/_apple/" + URL_TOKEN;
+        System.out.println("domain:" + domain);
         setSite(subject, userId, domain);
         Spider.create(wtkSubjectProcessor)
                 .addUrl(domain)
-                .addPipeline(subjectPipeline)
+                .addPipeline(pagerQuestionPipeline)
                 .addPipeline(new ConsolePipeline())
                 .run();
 
     }
 
     private void setSite(Subject subject, Integer userId, String domain) {
-
+        this.subject = subject;
         this.site = Site.me()
                 .setDomain(domain)
                 .setSleepTime(500)

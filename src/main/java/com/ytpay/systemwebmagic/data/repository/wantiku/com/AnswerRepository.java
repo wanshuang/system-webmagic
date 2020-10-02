@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AnswerRepository extends JpaRepository<Answer, Long> {
 
-    Subject findByQuestionId(Integer questionId);
+    Subject findByQuestionId(Long questionId);
 
 }

@@ -1,6 +1,7 @@
 package com.ytpay.systemwebmagic.model.wantiku.com;
 
 import lombok.Data;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
  * @date 2020/9/30
  */
 @Data
+@ToString
 public class QuestionStatisticVo {
 
     Integer questionId;

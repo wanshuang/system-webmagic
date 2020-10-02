@@ -30,7 +30,7 @@ public class MeiShiProcessor implements PageProcessor {
 
     private static String URL_MEISHI = "https://bj.meituan.com/meishi/c40/pn1/";
 
-    private static String UserAgentChrome = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36";
+    private static String UserAgentChrome = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36";
 
     private static String UserAgentFireFox = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0";
 
@@ -51,7 +51,7 @@ public class MeiShiProcessor implements PageProcessor {
             .setSleepTime(1000)
             .setRetryTimes(3)
             .setTimeOut(30000)
-            .setUserAgent(UserAgentFireFox);
+            .setUserAgent(UserAgentChrome);
 
 
     @Override
