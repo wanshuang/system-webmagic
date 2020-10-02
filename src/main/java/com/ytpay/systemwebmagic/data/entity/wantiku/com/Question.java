@@ -22,6 +22,7 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 
+    //项目信息
     Integer subjectId;
 
     Integer subjectParentId;
@@ -43,6 +44,7 @@ public class Question {
 
     Integer realOrderNumber;
 
+    //音频信息
     String audioUrl;
 
     String realPaperName;
@@ -60,6 +62,7 @@ public class Question {
 
     Integer askCount;
 
+    //常有错误答案
     String errorItem;
 
     //questionsAnswerEntity
@@ -73,6 +76,7 @@ public class Question {
     //用, 分割 正确答案
     String answerArray;
 
+    //正确答案解析
     String answerFormatContent;
 
 }
