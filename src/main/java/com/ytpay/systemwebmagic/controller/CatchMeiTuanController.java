@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/catch/meituan")
 public class CatchMeiTuanController {
 
+    final static int COUNT = 3;
+
     @Autowired
     MeiShiProcessor meiShiProcessor;
 
