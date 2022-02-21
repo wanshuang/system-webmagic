@@ -26,10 +26,6 @@ public class CatchMeiTuanController {
     @Autowired
     MeiShiSearchProcessor meiShiSearchProcessor;
 
-
-
-    final static int COUNT = 1;
-
     @RequestMapping(value = "/meishi", method = RequestMethod.GET)
     public String catchMeiShi(@RequestParam(value = "update", required = false) Boolean update) {
         meiShiProcessor.startCatch(update);
